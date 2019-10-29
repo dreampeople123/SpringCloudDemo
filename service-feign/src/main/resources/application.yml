@@ -7,4 +7,6 @@ server:
 spring:
   application:
     name: service-feign
-
+feign:
+  hystrix:
+    enabled: true #在D版本的Spring Cloud之后打开断路器，默认没打开
