@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.ze</groupId>
-        <artifactId>mytest4</artifactId>
+        <artifactId>SpringCloudDemo</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
