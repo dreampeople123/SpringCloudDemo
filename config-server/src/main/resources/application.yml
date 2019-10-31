@@ -3,9 +3,20 @@ spring:
     name: config-server
   cloud:
     config:
+      label: master
       server:
         git:
-          uri:
+          uri: https://github.com/dreampeople123/SpringCloudDemoConfig/
+          search-paths: respo
+          username:
+          password:
 server:
   port: 8888
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    instance:
+      prefer-ip-address: true #是否映射IP，访问路径时会显示IP
+
 
