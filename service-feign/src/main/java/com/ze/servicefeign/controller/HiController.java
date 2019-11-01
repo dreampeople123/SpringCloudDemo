@@ -4,7 +4,6 @@ import com.ze.servicefeign.clients.SchedualServiceHi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,8 +20,7 @@ public class HiController {
     private static final Logger LOG = LoggerFactory.getLogger(HiController.class);
 
     @Autowired
-    @Qualifier("servicehi")
-    SchedualServiceHi schedualServiceHi;
+    private SchedualServiceHi schedualServiceHi;
 
     @GetMapping(value = "/hi")
     public String sayHi(@RequestParam String name) {
@@ -36,10 +34,9 @@ public class HiController {
     }
 
     @RequestMapping("/info")
-    public void info(){
+    public String info(){
         LOG.info("info is being called");
-
-//        return schedualServiceHi.zipHi("http://localhost:8988/info",String.class);
+        return schedualServiceHi.sayinfo();
     }
 
 

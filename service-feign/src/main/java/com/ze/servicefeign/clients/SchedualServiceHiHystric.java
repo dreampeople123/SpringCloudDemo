@@ -14,4 +14,9 @@ public class SchedualServiceHiHystric implements SchedualServiceHi{
     public String sayHiFromClientOne(String name) {
         return "sorry "+name;
     }
+
+    @Override
+    public String sayinfo() {
+        return "sorry 123";
+    }
 }
