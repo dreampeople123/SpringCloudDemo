@@ -15,9 +15,9 @@ import org.springframework.context.annotation.Bean;
 @EnableEurekaClient
 @EnableDiscoveryClient
 @EnableFeignClients
+@EnableHystrix
 @EnableHystrixDashboard
 @EnableCircuitBreaker
-@EnableHystrix
 public class EurekaClientApplication {
 
     public static void main(String[] args) {
