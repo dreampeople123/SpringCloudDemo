@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: service-admin
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true #是否映射IP，访问路径时会显示IP
+
+info:
+  app.name: service-admin
+  company.name: www.ze.com
+  build.artifactId: service-admin
+  build.version: 0.0.1
+
+server:
+  port: 8862
+
+feign:
+  hystrix:
+    enabled: true

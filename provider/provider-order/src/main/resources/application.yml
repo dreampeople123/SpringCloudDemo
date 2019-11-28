@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: service-order
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true #是否映射IP，访问路径时会显示IP
+
+info:
+  app.name: service-order
+  company.name: www.ze.com
+  build.artifactId: service-order
+  build.version: 0.0.1
+
+server:
+  port: 8863
+
+feign:
+  hystrix:
+    enabled: true
