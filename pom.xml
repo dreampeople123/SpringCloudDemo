@@ -20,11 +20,11 @@
         <module>eureka-server</module>
         <module>service-zuul</module>
         <module>eureka-client</module>
-        <module>eureka-server</module>
         <module>service-feign</module>
         <module>service-ribbon</module>
         <module>provider-api</module>
         <module>provider</module>
+        <module>algorithm</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
