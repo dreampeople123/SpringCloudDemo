@@ -6,7 +6,10 @@ package com.ze.algorithm.class01;
  * @Date 2020/12/29
  */
 public class SelectTest {
-    //选择排序
+    public static void main(String[] args) {
+
+    }
+    //选择排序 O(n^2)
     public static void selectionSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
@@ -21,13 +24,13 @@ public class SelectTest {
         }
     }
 
-    private static void swap(int[] arr, int i, int minIndex) {
-        int tmp = arr[i];
-        arr[i] = arr[minIndex];
-        arr[minIndex] = tmp;
+    private static void swap(int[] arr, int i, int j) {
+        arr[i] = arr[i] ^ arr[j];
+        arr[j] = arr[i] ^ arr[j];
+        arr[i] = arr[i] ^ arr[j];
     }
 
-    //冒泡排序
+    //冒泡排序 O(n^2)
     public static void bubbleSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
@@ -38,7 +41,18 @@ public class SelectTest {
                     swap(arr, j, j + 1);
                 }
             }
+        }
+    }
 
+    //插入排序 最坏情况：O(n^2)  最好情况：O(n) 数据情况会影响时间复杂度
+    public static void insertionSort(int[] arr) {
+        if (arr == null || arr.length < 2) {
+            return;
+        }
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = i - 1; j >= 0 && arr[j] > arr[j + 1]; j--) {
+                swap(arr, j, j + 1);
+            }
         }
     }
 }
