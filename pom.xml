@@ -15,7 +15,7 @@
         <version>2.0.1.RELEASE</version>
         <relativePath/>
     </parent>
-
+<!--new 1 -->
     <modules>
         <module>eureka-server</module>
         <module>service-zuul</module>
